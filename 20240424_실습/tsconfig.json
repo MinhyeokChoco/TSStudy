@@ -1,0 +1,10 @@
+{
+  "include": [
+    "border/ts/**/*"
+  ],
+  "compilerOptions": {
+    "outDir": "./border/js", // 어디 폴더로 보낼건지
+    "target": "ES6", // ES 몇인지
+    "removeComments": true // 주석 제거
+  }
+}

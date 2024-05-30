@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clickEvent {
+            width: 500px;
+            height: 500px;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .list {
+            width: 200px;
+            height: 50px;
+            background-color: chartreuse;
+        }
+
+        .wrap {
+            overflow-y: scroll;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        리스트
+    </div>
+    <div class="wrap">
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+        <div class="clickEvent">클릭</div>
+    </div>
+</body>
+<script>
+    const clickEv = document.querySelector(".clickEvent");
+    // onclick는 값을 할당한다.
+    clickEv.onclick = () => {
+        console.log("난 onclick");
+    }
+    // 함수의 값을
+    /*
+    () => {
+        console.log("난 onclick");
+    }
+    */
+    // addEventListener는 배열에 쌓는다
+    clickEv.addEventListener("click", () => {
+        console.log("나 클릭됨.");
+    })
+    /*
+    click[0] === () => {
+        console.log("나 클릭됨");
+    }
+    */
+
+    // dir : 객체를 로그 찍을 때 조금 더 자세히 로그를 확인하기 위해 사용
+    console.dir(clickEv);
+
+    // function render() {
+    //     const _list = document.querySelector(".list");
+    //     const _ul = document.createElement("ul");
+    //     const _ll = document.createElement("ll");
+    //     _ul.append(_li);
+    //     _li.innerHTML = "첫번째 li 요소";
+
+    //     _li.addEventListener("click", () => {
+    //         console.log("클릭 됐음");
+    //     })
+
+    //     _list.append(_ul);
+    //     // 화면을 그리고 있다.
+    // }
+    // render();
+    // // 값이 바뀌고
+    // render();
+    // render();
+    const _list = document.querySelector(".list");
+    const clickEventHandler = () => {
+        console.log("나 클릭");
+        _list.removeEventListener("click", clickEventHandler);
+    }
+    _list.addEventListener("click", clickEventHandler);
+    // getEventListener === 등록된 이벤트의 내용을 가져온다.
+    // const getEvent = getEventListener(_list);
+
+
+    // 페이지의 로딩이 끝났을 때
+    window.onload = () => {
+        // 로딩이 끝나기 전까지는 실행되지 않는다.
+    }
+
+    window.addEventListener("load", () => {
+
+    })
+
+    // 브라우저의 창의 크기가 바뀌면 실행되는 이벤트
+    window.onresize = (e) => {
+        // innerWidth 요소의 크기가 커지면 너비
+        console.log(e.target.innerWidth);
+    }
+
+    // scroll
+    // 요소에서 스크롤이 됐을 때
+    const _wrap = document.querySelector(".wrap");
+    _wrap.onscroll = (e) => {
+        // top이 스크롤이 진행된 값
+        console.dir(e.target);
+    }
+
+    // 키보드 이벤트
+    // onkeydown 키를 누르자 마자
+    window.onkeydown = () => {
+        console.log("키를 눌렀어")
+    }
+
+    // onkeyup 키를 눌렀다가 떼면
+    window.onkeyup = () => {
+        console.log("키를 뗐을 때")
+    }
+
+    // 키를 누르고 있을 때
+    // onkeypress 키를 누르고 있을 때
+    window.onkeypress = () => {
+        console.log("키를 누르고 있을 때")
+    }
+
+    // 클릭을 더블 클릭 했을 때
+    window.ondblclick = () => {
+        console.log("더블 클릭 됐음");
+    }
+
+    // 클릭을 누르자 마자
+    window.onmousedown = () => {
+        console.log("마우스 클릭 누르면")
+    }
+
+    // 클릭을 뗐을 때
+    window.onmouseup = () => {
+        console.log("마우스 클릭을 누르고 떼면")
+    }
+
+    // 마우스가 움직이면 발생하는 이벤트
+    window.onmousemove = () => {
+        console.log("마우스가 움직임")
+        // x값 y값 
+    }
+
+    // 요소에서 마우스가 나가면
+
+    _wrap.onmouseleave = () => {
+        console.log("마우스가 요소에서 나가면")
+    }
+
+    // 요소에 마우스가 올려지면
+    _wrap.onmouseenter = () => {
+        console.log("마우스가 요소 위로 올라가면")
+    }
+
+    // pc ----------------------------------------------
+    // 모바일에서 hover도 안됨. hover가 클릭이나 마찬가지 
+
+    window.ontouchstart = () => {
+        console.log("모바일 터치가 됐을 때");
+    }
+
+    window.ontouchend = () => {
+        console.log("모바일 터치가 끝났을 때");
+    }
+</script>
+
+</html>

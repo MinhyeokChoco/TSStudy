@@ -1,0 +1,15 @@
+{
+  "name": "20240429",
+  "version": "1.0.0",
+  "description": "1. 1 ~ 45까지 담을 상자 2. 45개의 숫자중에서 랜덤한 숫자를 뽑을 기계 3. 기계로 랜덤하게 뽑은 숫자를 담을 상자",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}

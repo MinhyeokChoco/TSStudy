@@ -1,0 +1,100 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.big {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    width: 700px;
+    height: 700px;
+    border: 1px solid;
+    border-radius: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number {
+    width: 450px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 100px 0px 100px;
+}
+
+._number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+._number00 {
+    background-color: yellow;
+}
+
+._number01 {
+    background-color: pink;
+}
+
+._number02 {
+    background-color: blue;
+}
+
+._number03 {
+    background-color: green;
+}
+
+._number04 {
+    background-color: orange;
+}
+
+
+
+._number2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.bo {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: right;
+}

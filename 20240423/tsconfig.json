@@ -1,0 +1,19 @@
+{
+  // 와일드 카드
+  // css *
+  // /* : 모든 파일을 포함한다.
+  // /** : 모든 폴더를 포함시키겠다.
+  // src폴더에 모든 폴더들에서 모든 파일을 포함 시키겠다.
+  "include": [
+    "src/**/*"
+  ],
+  // **/.test.ts : 현재 폴더에서 모든 폴더의 파일중에서 확장자로 .test.ts라고 작성된 파일을 컴파일에서 제외시키겠다.
+  "exclude": [
+    "**/*.test.ts"
+  ],
+  "compilerOptions": {
+    "target": "ES6",
+    "outDir": "./dist", // distribution의 약자 배포하다 라는 뜻 (정하는 이름)
+    "removeComments": true, // 주석을 제거해서 변환 하겠다.
+  }
+}

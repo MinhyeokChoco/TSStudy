@@ -1,0 +1,10 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "removeComments": true,
+    "target": "ES6"
+  }
+}
